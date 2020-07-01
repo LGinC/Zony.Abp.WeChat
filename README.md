@@ -1,6 +1,13 @@
+# Abp.WeChat
+
+[![NuGet](https://img.shields.io/nuget/v/EasyAbp.Abp.WeChat.Common.svg?style=flat-square)](https://www.nuget.org/packages/EasyAbp.Abp.WeChat.Common)
+[![NuGet Download](https://img.shields.io/nuget/dt/EasyAbp.Abp.WeChat.Common.svg?style=flat-square)](https://www.nuget.org/packages/EasyAbp.Abp.WeChat.Common)
+
+专门为 ABP vNext 封装的微信模块，包括微信公众号和微信支付相关接口。
+
 ## 一、简要介绍
 
-**Zony.Abp.WeiXin** 库是针对于微信公众号与微信支付 API 进行了二次封装的模块，与 ABP vNext 框架深度集成。开发人员如果是基于 ABP vNext  框架开发项目，集成本模块以后，可以快速实现同微信开放平台的对接。
+**EasyAbp.Abp.WeChat** 库是针对于微信公众号与微信支付 API 进行了二次封装的模块，与 ABP vNext 框架深度集成。开发人员如果是基于 ABP vNext  框架开发项目，集成本模块以后，可以快速实现同微信开放平台的对接。
 
 ## 二、使用方式
 
@@ -17,8 +24,8 @@
 | 功能             | 是否支持                                                     |
 | ---------------- | ------------------------------------------------------------ |
 | 统一下单         | ![Support](https://img.shields.io/badge/-支持-brightgreen.svg) |
-| 查询订单         | ![NotSupport](https://img.shields.io/badge/-%E4%B8%8D%E6%94%AF%E6%8C%81-red.svg) |
-| 关闭订单         | ![NotSupport](https://img.shields.io/badge/-%E4%B8%8D%E6%94%AF%E6%8C%81-red.svg) |
+| 查询订单         | ![Support](https://img.shields.io/badge/-支持-brightgreen.svg) |
+| 关闭订单         | ![Support](https://img.shields.io/badge/-支持-brightgreen.svg) |
 | 申请退款         | ![Support](https://img.shields.io/badge/-支持-brightgreen.svg) |
 | 查询退款         | ![NotSupport](https://img.shields.io/badge/-%E4%B8%8D%E6%94%AF%E6%8C%81-red.svg) |
 | 下载对账单       | ![NotSupport](https://img.shields.io/badge/-%E4%B8%8D%E6%94%AF%E6%8C%81-red.svg) |
@@ -27,6 +34,9 @@
 | 交易保障         | ![NotSupport](https://img.shields.io/badge/-%E4%B8%8D%E6%94%AF%E6%8C%81-red.svg) |
 | 退款结果通知     | ![Support](https://img.shields.io/badge/-支持-brightgreen.svg) |
 | 拉取订单评价数据 | ![NotSupport](https://img.shields.io/badge/-%E4%B8%8D%E6%94%AF%E6%8C%81-red.svg) |
+
+#### 3.1.2 服务商特有接口
+TODO: ...
 
 ### 3.2 微信公众号
 
