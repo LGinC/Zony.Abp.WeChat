@@ -14,7 +14,6 @@ namespace EasyAbp.Abp.WeChat.MiniProgram.Infrastructure
     {
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IAccessTokenAccessor _accessTokenAccessor;
-
         public DefaultWeChatMiniProgramApiRequester(IHttpClientFactory httpClientFactory,
             IAccessTokenAccessor accessTokenAccessor)
         {
@@ -75,7 +74,10 @@ namespace EasyAbp.Abp.WeChat.MiniProgram.Infrastructure
             {
                 var jsonProperty = propertyInfo.GetCustomAttribute<JsonPropertyAttribute>();
                 var propertyName = jsonProperty != null ? jsonProperty.PropertyName : propertyInfo.Name;
-
+                if (propertyName?.Length > 0 && propertyName[0] >= 65 && propertyName[0] <= 90)//参数首字母是大写则转换为小写
+                {
+                    propertyName = $"{propertyName.Substring(0, 1).ToLower()}{propertyName.Substring(1)}";
+                }
                 queryStringBuilder.Append($"{propertyName}={propertyInfo.GetValue(request)}&");
             }
 

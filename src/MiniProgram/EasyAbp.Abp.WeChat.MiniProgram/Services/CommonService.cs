@@ -31,5 +31,17 @@ namespace EasyAbp.Abp.WeChat.MiniProgram.Services
 
         protected IWeChatMiniProgramApiRequester WeChatMiniProgramApiRequester => LazyLoadService(ref _weChatMiniProgramApiRequester);
         private IWeChatMiniProgramApiRequester _weChatMiniProgramApiRequester;
+        
+        /// <summary>
+        /// 服务器请求基础url
+        /// </summary>
+        protected string BaseUrl { get; set; }
+
+        /// <summary>
+        /// 构建请求地址
+        /// </summary>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        protected string BuildUrl(string action) => $"{(BaseUrl.EndsWith("/")?BaseUrl:$"{BaseUrl}/")}{action}";
     }
 }
